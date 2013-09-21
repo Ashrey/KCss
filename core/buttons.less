@@ -1,0 +1,76 @@
+.btn-var(@color){
+	border-color: darken(@color, 20);
+	border-bottom-color: darken(@color, 30);
+	#gradient.directional(@color, darken(@color, 10));
+	&:hover{
+		background: darken(@color, 20);
+	}
+}
+
+.btn {
+	display: inline-block;
+	text-decoration: none;
+	color: #fff;
+	border-radius: @border-radius-base;
+	border-width:1px;
+	line-height: @line-height-base;
+	padding: @padding-base-vertical @padding-base-horizontal;
+	.box-shadow(1px 1px 3px #555);
+	&:hover {
+		text-decoration:none;//for link
+		.box-shadow(1px 2px 5px #777);
+	}
+}
+
+.btn-default{
+	color: #000;
+	.btn-var(@btn-default-bg);
+}
+
+.btn-inverse {
+	.btn-var(#555);
+}
+.btn-danger {
+	.btn-var(@btn-danger-bg);
+}
+
+.btn-info {
+	.btn-var(@btn-info-bg);
+}
+.btn-success {
+	.btn-var(@btn-success-bg);
+}
+.btn-primary {
+	.btn-var(@btn-primary-bg);
+}
+.btn-warning {
+	.btn-var(@btn-warning-bg);
+}
+
+.btn-sm {
+	font-size: .7em;
+}
+.btn-lg {
+	font-size: 1.2em;
+}
+
+.btn-round {
+	border-radius: 20px;
+}
+
+.btn-active,
+.btn-active:hover,
+.btn.disabled,
+.btn[disabled],
+.btn-disabled,
+.btn-disabled:hover {
+	.opacity(1);
+	background: darken(#fff, 18);
+	border: 1px solid darken(#fff, 30);
+	text-shadow: 0 1px 1px #fff;
+}
+
+.btn.disabled,
+.btn[disabled]{
+	color: #999;
+}

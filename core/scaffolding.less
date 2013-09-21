@@ -1,0 +1,66 @@
+//
+// Scaffolding
+// --------------------------------------------------
+
+
+// Reset the box-sizing
+// -------------------------
+
+*,
+*:before,
+*:after {
+  .box-sizing(border-box);
+}
+
+body {
+  font-family: @font-family-base;
+  font-size: @font-size-base;
+  line-height: @line-height-base;
+  color: @text-color;
+  background-color: @body-bg;
+  margin:0;
+}
+
+// Links
+// -------------------------
+
+a {
+  color: @link-color;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  color: @link-hover-color;
+  text-decoration: underline;
+}
+a:focus {
+  .tab-focus();
+}
+
+
+// Images
+// -------------------------
+
+img {
+  vertical-align: middle;
+}
+
+// Rounded corners
+.img-rounded {
+  border-radius: @border-radius-large;
+}
+// Perfect circle
+.img-circle {
+  border-radius: 50%; // set radius in percents
+}
+
+
+// Horizontal rules
+// -------------------------
+
+hr {
+  margin-top:    @line-height-computed;
+  margin-bottom: @line-height-computed;
+  border: 0;
+  border-top: 1px solid @hr-border;
+}
