@@ -1,8 +1,6 @@
 //
 // Forms
 // --------------------------------------------------
-
-
 .form-control-focus(@color: @input-border-focus) {
   @color-rgba: rgba(red(@color), green(@color), blue(@color), .6);
   &:focus {
@@ -124,7 +122,7 @@ form.horizontal {
   
 // Only right align form labels here when the columns stop stacking
 @media (min-width: @screen-tablet) {
-  form.horizontal .control-label {
+  form.horizontal label.control {
     text-align: right;
   }
 }

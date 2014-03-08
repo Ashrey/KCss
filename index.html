@@ -91,9 +91,9 @@
       <button type="button" class="btn btn-warning">Warning</button>
       <button type="button" class="btn btn-danger">Danger</button>
       <button type="button" class="btn btn-inverse">Inverse</button>
-       <button type="button" class="btn btn-inverse btn-round">Inverse Round</button>
-       <button type="button" class="btn btn-default btn-lg">Default Lg</button>
-       <button type="button" class="btn btn-default btn-sm">Default Sm</button>
+      <button type="button" class="btn btn-inverse btn-round">Inverse Round</button>
+      <button type="button" class="btn btn-default btn-lg">Default Lg</button>
+      <button type="button" class="btn btn-default btn-sm">Default Sm</button>
     </div>
 
     <div class="bs-example btn-group">
@@ -104,7 +104,8 @@
     </div>
     
     <h2>Form</h2>
-    <form class="bs-example" role="form">
+    <h3>Normal form</h3>
+    <form>
       <div class="form-group">
         <label for="exampleInputEmail1">Email address</label>
         <input type="email" class="control" id="exampleInputEmail1" placeholder="Enter email">
@@ -125,6 +126,24 @@
       </div>
       <button type="submit" class="btn btn-default">Submit</button>
     </form>
+
+    <h3>Horizontal form</h3>
+    <form class="horizontal">
+      <div class="form-group">
+        <label for="exampleInputEmail1" class="control col-4">Email address</label>
+        <div class="col-4">
+          <input type="email" class="control" id="exampleInputEmail1" placeholder="Enter email">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1" class="control col-4">Password</label>
+        <div class="col-4">
+          <input type="password" class="control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+    
     
     <h2>Table</h2>
 
