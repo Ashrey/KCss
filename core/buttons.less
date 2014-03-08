@@ -1,24 +1,26 @@
 .btn-var(@color){
-	border-color: darken(@color, 20);
-	border-bottom-color: darken(@color, 30);
-	#gradient.directional(@color, darken(@color, 10));
+	border-bottom-color: darken(@color, 15);
+	#gradient.vertical(lighten(@color, 5), darken(@color, 20));
 	&:hover{
-		background: darken(@color, 20);
+		background: darken(@color, 15);
+		color: rgba(255, 255, 255, .8);
 	}
 }
 
 .btn {
 	display: inline-block;
 	text-decoration: none;
+	margin-top: 0;margin-bottom:0;
 	color: #fff;
+	border: 1px solid transparent;
 	border-radius: @border-radius-base;
-	border-width:1px;
 	line-height: @line-height-base;
 	padding: @padding-base-vertical @padding-base-horizontal;
-	.box-shadow(1px 1px 3px #555);
+	font-weight:bold;
+	font-size: @font-size-base;
+	vertical-align: middle;
 	&:hover {
 		text-decoration:none;//for link
-		.box-shadow(1px 2px 5px #777);
 	}
 }
 
@@ -58,8 +60,6 @@
 	border-radius: 20px;
 }
 
-.btn-active,
-.btn-active:hover,
 .btn.disabled,
 .btn[disabled],
 .btn-disabled,
