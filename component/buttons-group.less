@@ -1,16 +1,22 @@
 /* Group  */
 .btn-group {
-	display: inline-block;
-	margin-right: 2px;
-	.clearfix();
-	vertical-align: bottom;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle; // match .btn alignment given font-size hack above
+  > .btn {
+    position: relative;
+    float: left;
+ 	border-radius:0;
+  }
 }
-
-.btn-group > .btn,
-.btn-group > input {
-	float: left;
-	border-radius: 0;
-	margin-left: -1px;
+// Prevent double borders when buttons are next to each other
+.btn-group {
+  .btn + .btn,
+  .btn + .btn-group,
+  .btn-group + .btn,
+  .btn-group + .btn-group {
+    margin-left: -1px;
+  }
 }
 
 .btn-group > .btn:first-child{
@@ -33,22 +39,6 @@
 	border-radius: 0 15px 15px 0;
 }
 
-
-
-.btn-append,
 .btn-group .btn {
 	padding: 7px 1.1em 6px 1.1em;
-}
-
-/* Append  */
-.btn-append {
-	position: relative;
-	top: -1px;
-	margin-left: -2px;
-	border-radius:  0 4px 4px 0;
-}
-
-/* FF fix */
-@-moz-document url-prefix("http://") {
-	input[type=submit].btn::-moz-focus-inner, button.btn::-moz-focus-inner { border: 0; padding: 0; }
 }
